@@ -47,13 +47,6 @@
 
     [self.physicsWorld addJoint:_myRopeJoint];
     [self.physicsWorld addJoint:_myRopeJoint1];
-    
-    
-    
-    
-    
-    
-    
     [self.physicsWorld addJoint:_myRopeJoint2];
     [self.physicsWorld addJoint:_myRopeJoint3];
     [self.physicsWorld addJoint:_myRopeJoint4];
