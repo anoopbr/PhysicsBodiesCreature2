@@ -47,6 +47,13 @@
 
     [self.physicsWorld addJoint:_myRopeJoint];
     [self.physicsWorld addJoint:_myRopeJoint1];
+    
+    
+    
+    
+    
+    
+    
     [self.physicsWorld addJoint:_myRopeJoint2];
     [self.physicsWorld addJoint:_myRopeJoint3];
     [self.physicsWorld addJoint:_myRopeJoint4];
@@ -64,7 +71,7 @@
 }
 
 -(void) spwanCircle{
-    
+
 }
 
 -(void) spawnSquares{
@@ -116,12 +123,25 @@
 }
 
 -(void)makeShelf{
-    _myShelf = [[SKSpriteNode alloc]initWithColor:[SKColor whiteColor] size:CGSizeMake(100, 40)];
-    _myShelf.position = CGPointMake(self.size.width/2.4, self.size.height/2);
+    _myShelf = [[SKSpriteNode alloc]initWithColor:[SKColor whiteColor] size:CGSizeMake(100, 10)];
+    _myShelf1 = [[SKSpriteNode alloc]initWithColor:[SKColor whiteColor] size:CGSizeMake(50, 10)];
+    _myShelf2 = [[SKSpriteNode alloc]initWithColor:[SKColor whiteColor] size:CGSizeMake(80, 10)];
+    
+    _myShelf.position = CGPointMake(self.size.width/1.5, self.size.height/1.5);
+    _myShelf1.position = CGPointMake(self.size.width/2.4, self.size.height/2);
+    _myShelf2.position = CGPointMake(self.size.width/4.4, self.size.height/5);
+    
     _myShelf.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myShelf.size];
+    _myShelf1.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myShelf.size];
+    _myShelf2.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:_myShelf.size];
+    
     [_myShelf.physicsBody setDynamic:NO];
+    [_myShelf1.physicsBody setDynamic:NO];
+    [_myShelf2.physicsBody setDynamic:NO];
     
     [self addChild:_myShelf];
+    [self addChild:_myShelf1];
+    [self addChild:_myShelf2];
     
 }
 
